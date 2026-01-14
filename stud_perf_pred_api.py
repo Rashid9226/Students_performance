@@ -8,6 +8,11 @@ import numpy as np
 
 app = FastAPI()
 
+@app.get("/", response_class=HTMLResponse)
+def home():
+    with open("index.html", "r", encoding="utf-8") as f:
+        return f.read()
+
 # Enable CORS so the frontend (served from a different origin/file) can call the API
 app.add_middleware(
     CORSMiddleware,
