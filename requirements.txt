@@ -1,0 +1,6 @@
+streamlit
+fastapi
+pandas
+joblib
+scikit-learn
+uvicorn
